@@ -74,6 +74,11 @@ Change into the project directory, for example, lara54.
 
 1. [http://localhost:8000](http://localhost:8000)
 
+## Sharing
+
+From Guest:
+
+`$ ngrok http 192.168.10.10:80 -host-header=lara54.app`
 
 ## Clean-up
 
