@@ -5,6 +5,10 @@
 These instructions should work for Mac, WinOS, and Linux. If everything goes according to plan you will not need to install PHP7 or
 Composer on your laptop.
 
+By running the code in a pre-packaged VM, we reduce the depencies on the host operating system.
+
+You can find out more about [Laravel Homestead](https://laravel.com/docs/5.4/homestead) on their web site.
+
 ## Download Dependencies for your platform
 
 1. Download and install [VirtualBox 5.1](https://www.virtualbox.org/wiki/Downloads)
@@ -19,7 +23,7 @@ Composer on your laptop.
 
 ## Prepare the project directory with your laptop specific directory locations
 
-This is done from a Cmd prompt in Windows or terminal window on a Mac. Change cp to xcopy in WinOS.
+The following steps are performed from a Cmd prompt in Windows or terminal window on a Mac. Change cp to xcopy in WinOS.
 
 1. `> cd lara54`
 
@@ -29,11 +33,30 @@ This is done from a Cmd prompt in Windows or terminal window on a Mac. Change cp
 
 4. Edit Homestead.yaml and change the directories in the file to point to your local file system
 
-## Start Vagrant virtual machine and login
+## Start Vagrant virtual machine and login to Vagrant VM
 
-1. `vagrant up`
+Steps below are performed from the host machine.
 
-2. `vagrant ssh`
+1. `> vagrant up`
+
+2. `> vagrant ssh`
+
+You will then be logged on to the Homestead instance. The screen should look something like this:
+
+```console
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-51-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+3 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Apr  5 01:11:23 2017 from 10.0.2.2
+vagrant@lara54:~
+```
 
 ## Install PHP Composer Dependencies
 
@@ -60,4 +83,4 @@ From Guest:
 
 From Host:
 
-1. `$ vagrant halt`
+1. `> vagrant halt`
