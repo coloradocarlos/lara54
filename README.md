@@ -76,7 +76,7 @@ Change into the project directory, for example, lara54.
 
 ## Sharing
 
-From Guest:
+From Guest machine:
 
 `$ ngrok http 192.168.10.10:80 -host-header=lara54.app`
 
